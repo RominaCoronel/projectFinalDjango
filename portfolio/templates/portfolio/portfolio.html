@@ -1,0 +1,52 @@
+{% extends 'core/base.html' %}
+{% block title %}Portfolio{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/portfolio.jpg' %}{% endblock %}
+
+{% block headers %}
+<h1>Portfolio</h1>
+<span class="subheading">Nuestros Proyectos</span>
+{% endblock %}
+
+{% block content %}
+
+<!-- Proyecto -->
+<div class="row project">  	
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid" src="{% static 'core/img/derSchemetterling.jpg' %}" alt="">
+    </div>
+  <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">derSchemetterling Photography</h2>   
+      <p>"El verdadero propósito de cualquier objetivo es enriquecerte como persona a raíz del esfuerzo realizado para satisfacerlo."</p>
+      <p>Anthony Robbins</p>
+      <!--<p><a href="http://google.com">Más información</a></p>-->
+    </div>
+</div>
+<!-- Proyecto -->
+<div class="row project">  	
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid" src="{% static 'core/img/pequena_panaderia.jpg' %}" alt="">
+    </div>
+  <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">La Pequeña Panadería</h2>   
+      <p>"El talento depende de la inspiración.</p>
+      <p>Pero el esfuerzo depende de cada uno."</p>
+      <p>Pep Guardiola</p>
+      <!--<p><a href="http://google.com">Más información</a></p>-->
+    </div>
+</div>
+{% for project in projects %}
+<div class="row project">  	
+  <div class="col-lg-3 col-md-4 offset-lg-1">
+      <img class="img-fluid" src="{{project.image.url}}" alt="">
+  </div>
+<div class="col-lg-7 col-md-8">
+      <h2 class="section-heading title">{{project.title}}</h2>   
+    <p>{{project.descripcion}}</p>
+    
+    
+    <!--<p><a href="http://google.com">Más información</a></p>-->
+  </div>
+  </div>
+{% endfor %}
+{% endblock %}

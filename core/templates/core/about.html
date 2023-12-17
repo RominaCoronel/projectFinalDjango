@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Acerca de Nosotros{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/nosotros.jpg' %}{% endblock %}
+
+{% block headers %}
+<h1>Acerca de Nosotros</h1>
+<span class="subheading">Una historia breve... muuuy breve.</span>
+{% endblock %}
+{% block content %}
+<div class="col-lg-3 col-md-4 offset-lg-1">
+    <img class="img-fluid avatar" src="img/acerca.jpg" alt="">
+  </div>
+  <div class="col-lg-7 col-md-8">
+      
+    <p>Somos un grupo formado por estudiantes del Curso FullStack Python del Programa de Codo a Codo.</p>
+    
+  </div>
+{% endblock %}
